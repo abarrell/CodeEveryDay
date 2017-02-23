@@ -5,11 +5,15 @@
 #include <string>
 #include "dynamic.h"
 #include "arrays_and_strings.h"
+#include "unit_tests.h"
 
 using namespace std;
 
+
+
 int main(int argc, const char * argv[]) {
-	cout << checkPalindrome("elle") << endl;
-	cout << checkPalindrome("hello") << endl;
+	testCheckPalindrome();
 	return 0;
 }
+
+
