@@ -8,7 +8,7 @@ using namespace std;
 // develop an algorithm to count how many possible ways the child can run up the stairs
 
 
-int numStairWaysHelper(int n, unordered_map<int,int> &memo) {
+static int numStairWaysHelper(int n, unordered_map<int,int> &memo) {
 	if(n < 0) {
 		return 0;
 	}
