@@ -16,7 +16,7 @@ static int numStairWaysHelper(int n, unordered_map<int,int> &memo) {
 		return 1;
 	}
 	if (memo.find(n) != memo.end()) {
-		return memo[n];	
+		return memo[n];
 	}
 	int value_at_n = numStairWaysHelper(n-1, memo) + numStairWaysHelper(n-2, memo) + numStairWaysHelper(n-3, memo);
 	memo[n] = value_at_n;
@@ -27,4 +27,48 @@ int numStairWays(int n) {
 	unordered_map<int, int> memo;
 	return numStairWaysHelper(n, memo);
 }
+
+// [1,2,5,6,4,3,8,1,9,10,2,7,8,5,6,1] ---> 
+
+struct SubDat {
+	int last;
+	int size;
+};
+
+
+
+int sizeofLongestIncreasingSubset(vector<int> v) {
+
+	vector<SubDat> memo;
+
+	SubDat init;
+	init.last = v[0];
+	init.size = 1;
+	memo.push_back(init);
+
+	for(int i = 1; i < v.size(); ++i) {
+		int size = memo.size();
+		for (int j = 0; j < size; ++j) {
+			SubDat n;
+			if(memo[j].last < v[i]){
+				n.last = v[i];
+				n.size = memo[j].size +1;
+				memo.push_back(n);
+				continue;
+			}
+			else {
+				n.last = v[i];
+				n.size = 1;
+				memo.push_back(n);
+				continue;
+			}
+		}
+	}
+	int highest = 0;
+	for (int k = 0; k < memo.size(); ++k) {
+		if(memo[k].size > highest) highest = memo[k].size;
+	}
+	return highest;
+}	
+
 
