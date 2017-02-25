@@ -4,6 +4,7 @@
 #include "arrays_and_strings.h"
 #include "dynamic.h"
 #include "unit_tests.h"
+#include "math_and_logic.h"
 #include <vector>
 
 using namespace std;
@@ -63,6 +64,17 @@ void testLongestIncreasingSubset() {
 	test1.push_back(1);
 	assert(longestIncreasingSubset(test1) == comp);
 
+	cout << "Success!" << endl;
+}
+
+void testIsPowerOfTwo() {
+	cout << "Testing isPowerOfTwo" << endl;
+	assert(isPowerOfTwo(2) == true);
+	assert(isPowerOfTwo(4) == true);
+	assert(isPowerOfTwo(32) == true);
+	assert(isPowerOfTwo(0) == true);
+	assert(isPowerOfTwo(15)== false);
+	assert(isPowerOfTwo(12) == false);
 	cout << "Success!" << endl;
 }
 

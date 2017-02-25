@@ -6,6 +6,7 @@
 #include "dynamic.h"
 #include "arrays_and_strings.h"
 #include "unit_tests.h"
+#include "math_and_logic.h"
 
 using namespace std;
 
@@ -14,11 +15,12 @@ void test(){
 	testCheckPalindrome();
 	testSizeOfLongestIncreasingSubset();
 	testLongestIncreasingSubset();
+	testIsPowerOfTwo();
 }
 #endif
 
 int main(int argc, const char * argv[]) {
-	
+
 	#ifndef NDEBUG
 	test();
 	#endif

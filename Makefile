@@ -4,7 +4,7 @@ CPP := g++
 # standard flags
 CPPFLAGS := -Wall -Werror -pedantic 
 # list of files in the project release
-PROJECT_FILES := dynamic.cpp main.cpp arrays_and_strings.cpp
+PROJECT_FILES := dynamic.cpp main.cpp arrays_and_strings.cpp math_and_logic.cpp
 # list of test files not to be included in release
 TEST_FILES := unit_tests.cpp
 
