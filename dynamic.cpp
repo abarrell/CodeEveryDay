@@ -30,13 +30,14 @@ int numStairWays(int n) {
 
 // [1,2,5,6,4,3,8,1,9,10,2,7,8,5,6,1] ---> 
 
+
+// Subset data struct for sizeofLongestSubset
 struct SubDat {
 	int last;
 	int size;
 };
 
-
-
+// finds the size of the longest STRICTLY increasing subset in a vector
 int sizeofLongestIncreasingSubset(vector<int> v) {
 
 	vector<SubDat> memo;
