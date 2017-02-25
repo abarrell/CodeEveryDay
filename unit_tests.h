@@ -6,3 +6,4 @@ using namespace std;
 
 void testCheckPalindrome();
 void testSizeOfLongestIncreasingSubset();
+void testLongestIncreasingSubset();

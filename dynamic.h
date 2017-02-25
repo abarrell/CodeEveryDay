@@ -12,5 +12,8 @@
 
 int numStairWays(int n);
 
+
+// Find the length of the longest strictly increasing subset in a vector of integers
 int sizeofLongestIncreasingSubset(std::vector<int> v);
 
+std::vector<int> longestIncreasingSubset(std::vector<int> v);

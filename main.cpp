@@ -9,11 +9,20 @@
 
 using namespace std;
 
-
-
-int main(int argc, const char * argv[]) {
+#ifndef NDEBUG
+void test(){
 	testCheckPalindrome();
 	testSizeOfLongestIncreasingSubset();
+	testLongestIncreasingSubset();
+}
+#endif
+
+int main(int argc, const char * argv[]) {
+	
+	#ifndef NDEBUG
+	test();
+	#endif
+
 	return 0;
 }
 
