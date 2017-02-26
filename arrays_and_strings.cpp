@@ -1,6 +1,6 @@
 // implementations for array and string problems
+#include "includes.h"
 #include "arrays_and_strings.h"
-#include <string>
 
 using namespace std;
 

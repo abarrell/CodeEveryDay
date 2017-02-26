@@ -1,9 +1,6 @@
 // Dynamic programming header file
 
-#include <iostream>
-#include <cstdlib> 
-#include <unordered_map>
-#include <vector>
+#include "includes.h"
 
 
 
@@ -16,4 +13,6 @@ int numStairWays(int n);
 // Find the length of the longest strictly increasing subset in a vector of integers
 int sizeofLongestIncreasingSubset(std::vector<int> v);
 
+
+// return the actual longest strictly increasing subset within a given vector.
 std::vector<int> longestIncreasingSubset(std::vector<int> v);

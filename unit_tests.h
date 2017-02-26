@@ -1,6 +1,4 @@
-#include <cassert>
-#include "arrays_and_strings.h"
-#include "dynamic.h"
+#include "includes.h"
 
 using namespace std;
 

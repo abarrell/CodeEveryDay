@@ -1,12 +1,6 @@
 // The controller for all my practice questions
-
-#include <iostream>
-#include <cstdlib> 
-#include <string>
-#include "dynamic.h"
-#include "arrays_and_strings.h"
+#include "includes.h"
 #include "unit_tests.h"
-#include "math_and_logic.h"
 
 using namespace std;
 

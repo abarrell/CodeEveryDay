@@ -1,6 +1,4 @@
-#include <cmath>
-#include <string>
-#include <iostream>
+#include "includes.h"
 
 using namespace std;
 

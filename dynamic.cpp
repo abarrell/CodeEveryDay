@@ -1,11 +1,10 @@
 //Dynamic programming problems
-#include "dynamic.h"
+#include "includes.h"
 
 using namespace std;
 
 
-// A child is running up a staircase with n steps and can hop either 1, 2 or 3 steps
-// develop an algorithm to count how many possible ways the child can run up the stairs
+
 
 static int numStairWaysHelper(int n, unordered_map<int,int> &memo) {
 	if(n < 0) {
@@ -22,12 +21,13 @@ static int numStairWaysHelper(int n, unordered_map<int,int> &memo) {
 	return value_at_n;
 }
 
+// A child is running up a staircase with n steps and can hop either 1, 2 or 3 steps
+// develop an algorithm to count how many possible ways the child can run up the stairs
+
 int numStairWays(int n) {
 	unordered_map<int, int> memo;
 	return numStairWaysHelper(n, memo);
 }
-
-// [1,2,5,6,4,3,8,1,9,10,2,7,8,5,6,1] ---> 
 
 
 // Subset data struct for sizeofLongestSubset
@@ -36,7 +36,8 @@ struct SubDat {
 	int size;
 };
 
-// finds the size of the longest STRICTLY increasing subset in a vector
+// finds the size of the longest STRICTLY increasing subset in a vector -- pretty dumb function tbh, should have just implemented
+// it the other way to begin with
 int sizeofLongestIncreasingSubset(vector<int> v) {
 
 	vector<SubDat> memo;

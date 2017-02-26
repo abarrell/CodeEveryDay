@@ -1,11 +1,10 @@
 
 
-#include <cassert>
-#include "arrays_and_strings.h"
+#include "includes.h"
 #include "dynamic.h"
-#include "unit_tests.h"
 #include "math_and_logic.h"
-#include <vector>
+#include "unit_tests.h"
+#include "arrays_and_strings.h"
 
 using namespace std;
 
@@ -21,6 +20,8 @@ void testCheckPalindrome() {
 	return;
 }
 
+
+// need to add more cases for longest increasing subset
 void testSizeOfLongestIncreasingSubset() {
 	cout << "Testing sizeofLongestIncreasingSubset" << endl;
 	vector<int> test1;
@@ -51,7 +52,7 @@ void testLongestIncreasingSubset() {
 	comp.push_back(-1);
 	comp.push_back(0);
 	comp.push_back(1);
-
+	cout << comp << endl;
 	test1.push_back(0);
 	test1.push_back(1);
 	test1.push_back(0);
@@ -62,6 +63,8 @@ void testLongestIncreasingSubset() {
 	test1.push_back(-1);
 	test1.push_back(0);
 	test1.push_back(1);
+	cout << test1 <<endl;
+	cout << longestIncreasingSubset(test1) <<endl;
 	assert(longestIncreasingSubset(test1) == comp);
 
 	cout << "Success!" << endl;
