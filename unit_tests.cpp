@@ -8,6 +8,8 @@
 
 using namespace std;
 
+
+// Test the check palindrome function with edge cases 
 void testCheckPalindrome() {
 	cout << "Testing checkPalindrome" << endl;
 	assert(checkPalindrome("elle") == true);
