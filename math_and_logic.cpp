@@ -36,12 +36,12 @@ long long addLinkedList(node * n1, node * n2) {
 
 node * addLinkedListRecursive(node * n1, node * n2, int carry = 0) {
 	node * p = new node;
-	int carry = 0;
+	int new_carry = 0;
 	int total;
 	if(n1 and n2) {
 		total = n1->data + n2->data + carry;
 		if(total >= 10) {
-			carry = 1;
+			new_carry = 1;
 			total -= 10;
 		}
 	}
@@ -55,6 +55,6 @@ node * addLinkedListRecursive(node * n1, node * n2, int carry = 0) {
 		return NULL;
 	}
 	p->data = total;
-	p->next = addLinkedListRecursive(n1->next, n2->next, carry);
+	p->next = addLinkedListRecursive(n1->next, n2->next, new_carry);
 	return p;
 }
