@@ -31,6 +31,7 @@ bool isPair(char a1, char a2) {
 	}	
 	return true;
 }
+
 bool checkParenthesis(string s) {
 	stack<char> stk;
 	for (int i = 0; i < s.length(); ++i) {
